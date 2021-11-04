@@ -93,7 +93,7 @@ body {
     font-weight: bold;
     color: white;
     /*cor do pai principal*/
-    background: #FF0000;
+    background: #8dccad;
     text-shadow: 0 0 10px rgba(0,0,0,.1);
     border: 1px solid  rgba(0,0,0,.025);
     box-shadow: 0px 2px 1px rgba(0,0,0,0.15);
@@ -101,7 +101,7 @@ body {
 }
 /*Evento de passar o mouse por cima cor de filhos*/
 .primaryNav li a:hover {
-    background-color: #000000;
+    background-color: #80FF00;
 }
 .primaryNav a:link:after,
 .primaryNav a:visited:after,
@@ -128,12 +128,12 @@ body {
 
 /*Sub filhos equipe cor*/
 .primaryNav ul ul li a {
-    background-color: darkgray;
+    background-color: #f5cc7f;
 }
 
 /*Evento de passar o mouse por cima cor sub filhos */
 .primaryNav ul ul li a:hover {
-    background-color: #151515;
+    background-color: #FCDE01;
 }
 .primaryNav ul ul li:first-child {
     padding-top: 2em;
@@ -153,7 +153,7 @@ body {
 
 /*cor dos numero do protocolo e data*/
 .primaryNav ul ul ul li a {
-    background-color: #0000FF;
+    background-color: #2196f3;
     font-size: .60em;
     padding: .60em;
     width: 90%;
@@ -163,7 +163,7 @@ body {
 
 /*evento do passar o mouse por cima dos numero do protocolo e data e mudar a cor*/
 .primaryNav ul ul ul li a:hover {
-    background-color: #151515;
+    background-color: #1A2DD9;
 }
 .primaryNav ul ul ul li:first-child {
     padding-top: 1em;
@@ -181,12 +181,12 @@ body {
     padding-bottom: .3125em;
 }
 .primaryNav ul ul ul ul li a {
-    background-color: #151515;
+    background-color: #7b9fe0;
     padding: .75em ;
     width: 80%;
 }
 .primaryNav ul ul ul ul li a:hover {
-    background-color: #FF0000;
+    background-color: #1A2DD9;
 }
 .primaryNav ul ul ul ul li a:link:after,
 .primaryNav ul ul ul ul li a:visited:after {
