@@ -1,377 +1,164 @@
-/* ------------------------------------------------------------
-	Reset Styles
------------------------------------------------------------- */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, font, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: 0;
-    font-weight: inherit;
-    font-style: inherit;
-    font-size: 100%;
-    font-family: inherit;
-    vertical-align: baseline;
+#painel{
+    width: 200px;
+    padding: 10px;
 }
 
-/* ------------------------------------------------------------
-	General Styles
------------------------------------------------------------- */
-
-* {
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
-body {
-    font-family: "Proxima Nova", Helvetica, Arial, sans-serif;
-    background: white;
-    color: black;
-    font-size: 16px;
-    line-height: 1;
-    padding: 2em;
 
-}
-.sitemap {
-    margin: 0 0 2em 0;
-}
-
-/* ------------------------------------------------------------
-	Page Styles
------------------------------------------------------------- */
-
-/* -------- Top Level --------- */
-
-.primaryNav {
-    clear: both;
-    width: 100%;
-    margin-top: 3em;
-}
-.primaryNav #home {
-    position: absolute;
-    margin-top: -4em;
-    margin-bottom: 0;
-    min-width: 11.5em;
-    width: 100%;
-
-}
-
-.primaryNav #home:before {
-    display: none;
-}
-
-
-
-.primaryNav ul {
-    text-align: center;
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
+* {
     position: relative;
-
-}
-.primaryNav li {
-    flex: 1;
-    flex-basis: 11.5em;
-    padding-right: 1.25em;
-    position: relative;
-
-}
-.primaryNav > ul > li {
-    margin-top: 3em;
-}
-.primaryNav li a {
     margin: 0;
-    padding: .875em .9375em .9375em .9375em;
-    display: block;
-    font-size: .9375em;
-    font-weight: bold;
-    color: white;
-    /*cor do pai principal*/
-    background: #8dccad;
-    text-shadow: 0 0 10px rgba(0,0,0,.1);
-    border: 1px solid  rgba(0,0,0,.025);
-    box-shadow: 0px 2px 1px rgba(0,0,0,0.15);
-    text-decoration: none;
-}
-/*Evento de passar o mouse por cima cor de filhos*/
-.primaryNav li a:hover {
-    background-color: #80FF00;
-}
-.primaryNav a:link:after,
-.primaryNav a:visited:after,
-.utilityNav a:link:after,
-.utilityNav a:visited:after {
-    content: " "attr(href)" ";
-    display: block;
-    font-weight: 600;
-    font-size: .75em;
-    margin-top: .25em;
-    word-wrap: break-word;
-    color: rgba(255,255,255,.75);
+    padding: 0;
+
+    border: 0 none;
+
+    -webkit-transition: all ease .4s;
+    -moz-transition: all ease .4s;
+    transition: all ease .4s;
 }
 
-/* -------- Second Level --------- */
+html,
+body {
 
-.primaryNav ul ul {
-    display: block;
-}
-.primaryNav ul ul li {
-    padding-top: .6875em;
-    padding-right: 0;
-}
+    height: auto;
+    width: auto;
 
-/*Sub filhos equipe cor*/
-.primaryNav ul ul li a {
-    background-color: #f5cc7f;
-}
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 
-/*Evento de passar o mouse por cima cor sub filhos */
-.primaryNav ul ul li a:hover {
-    background-color: #FCDE01;
-}
-.primaryNav ul ul li:first-child {
-    padding-top: 2em;
-}
+    background-color: white;
 
-/* -------- Third Level --------- */
 
-.primaryNav ul ul ul {
-    margin-top: .6em;
-    padding-top: .6em;
-    padding-bottom: .625em;
-}
-.primaryNav ul ul ul li {
-    padding-top: .3125em;
-    padding-bottom: .3125em;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 18px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
-/*cor dos numero do protocolo e data*/
-.primaryNav ul ul ul li a {
-    background-color: #2196f3;
-    font-size: .60em;
-    padding: .60em;
-    width: 90%;
-    margin-right: 0;
-    margin-left: auto;
+
+
+
+.nav ul {
+    position: relative;
+    padding-top: 20px;
 }
 
-/*evento do passar o mouse por cima dos numero do protocolo e data e mudar a cor*/
-.primaryNav ul ul ul li a:hover {
-    background-color: #1A2DD9;
-}
-.primaryNav ul ul ul li:first-child {
-    padding-top: 1em;
-}
-.primaryNav ul ul ul li a:link:after,
-.primaryNav ul ul ul li a:visited:after {
-    font-size: .75em;
-}
+.nav li {
+    position: relative;
+    padding: 20px 3px 0 3px;
+    float: left;
 
-/* --------	Fourth Level --------- */
-
-.primaryNav ul ul ul ul {
-    margin-top: 0;
-    padding-top: .3125em;
-    padding-bottom: .3125em;
-}
-.primaryNav ul ul ul ul li a {
-    background-color: #7b9fe0;
-    padding: .75em ;
-    width: 80%;
-}
-.primaryNav ul ul ul ul li a:hover {
-    background-color: #1A2DD9;
-}
-.primaryNav ul ul ul ul li a:link:after,
-.primaryNav ul ul ul ul li a:visited:after {
-    display: none;
-}
-
-/* ------------------------------------------------------------
-	Connecting Lines:
-	Uncomment 'border-color: red' for debugging
------------------------------------------------------------- */
-
-.primaryNav ul:before,
-.primaryNav ul:after,
-.primaryNav ul li:before,
-.primaryNav ul li:after {
-    display: block;
-    content: '';
-    position: absolute;
-    border-width: 0;
-    /*definição da cor da linha*/
-    border-color: black;
-    border-style: solid;
-    z-index: -1;
-    /* border-color: red; */
-}
-.primaryNav > ul > li:before {
-    height: 1.375em;
-    top: -1.375em;;
-    right: calc(50% + .625em);
-    width: calc(100% - 2px);
-    border-top-width: 2px;
-    border-right-width: 2px;
-    /* border-color: red; */
-}
-.primaryNav > ul > li:first-child + li:before {
-    border-top-width: 0;
-    height: 5em;
-    top: -5em;
-    /* border-color: red; */
-}
-.primaryNav ul ul li:after {
-    width: 50%;
-    height: .6875em;
-    top: 0;
-    right: 1px;
-    border-left-width: 2px;
-    /* border-color: red */;
-}
-.primaryNav ul ul li:first-child:before {
-    width: 50%;
-    height: 1.3125em;
-    top: .6875em;
-    right: 1px;
-    border-left-width: 2px;
-    /* border-color: red; */
-}
-.primaryNav > ul > li:last-child:after {
-    border-bottom-width: 0;
-}
-.primaryNav ul ul ul li:before {
-    width: calc(50% - 5px) !important;
-    height: calc(100% - 2px);
-    top: -50%;
-    left: 0;
-    border-left-width: 2px;
-    border-bottom-width: 2px;
-    /* border-color: red; */
-}
-.primaryNav ul ul ul li:first-child:before {
-    height: 2.125em;
-    top: -1px;
-    border-top-width: 2px;
-    /* border-color: red; */
-}
-.primaryNav ul ul ul:before {
-    width: 50%;
-    height: 1.25em;
-    top: -10px;
-    right: 1px;
-    border-left-width: 2px;
-    /* border-color: red; */
-}
-.primaryNav ul ul ul li:after {
-    border-width: 0;
-}
-.primaryNav ul ul ul ul li:before,
-.primaryNav ul ul ul ul li:first-child:before {
-    display: none;
-}
-
-.primaryNav ul ul ul ul:before {
-    width: 1px;
-    height: calc(100% + 2.5em);
-    top: -2.5em;
-    left: 0;
-    border-left-width: 2px;
-    /* border-color: red; */
-}
-
-/* ------------------------------------------------------------
-	Utility Navigation
------------------------------------------------------------- */
-
-.utilityNav {
-    float: right;
-    margin-top: 0;
-    margin-bottom: -.25em;
-    margin-right: 1.25em;
-    max-width: 48%;
+    text-align: center;
     list-style-type: none;
 }
-.utilityNav li {
-    padding: 0 0 .625em .625em;
+
+.nav li::before, .nav li::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 50%;
+    width: 50%;
+    height: 20px;
+    border-top: 3px solid black;
+}
+
+.nav li::after{
+    left: 50%;
+    right: auto;
+
+    border-left: 3px solid black;
+}
+
+.nav li:only-child::after, .nav li:only-child::before {
+    content: '';
+    display: none;
+}
+
+.nav li:only-child{ padding-top: 0;}
+.nav li:first-child::before, .nav li:last-child::after{
+    border: 0 none;
+}
+
+.nav li:last-child::before{
+    border-right: 3px solid black;
+    border-radius: 0 5px 0 0;
+}
+
+.nav li:first-child::after{
+    border-radius: 5px 0 0 0;
+}
+.nav ul ul::before{
+    content: '';
+    position: absolute; top: 0; left: 50%;
+    border-left: 3px solid black;
+    width: 0;
+    height: 20px;
+}
+
+.nav li a{
     display: inline-block;
-}
-.utilityNav li:first-child {
-}
-.utilityNav li a {
-    display: block;
-    font-size: .75em;
-    font-weight: 700;
-    padding: .75em 1em;
-    font-weight: bold;
-    text-align: left;
-    color: white;
-    background-color: #ff9d00;
-    border: 1px solid  rgba(0,0,0,.025);
-    box-shadow: 0px 2px 0 rgba(0,0,0,0.15);
-    text-shadow: 0 0 10px rgba(0,0,0,.15);
+    padding: 5px 10px;
+
+    border-radius: 5px;
+    border: 1px solid black; /*cor do contorno das bordas*/
+
     text-decoration: none;
-}
-.utilityNav li a:hover {
-    background-color: #ff831b;
-}
-.utilityNav li a:link:after,
-.utilityNav li a:visited:after {
-    color: rgba(255,255,255,.75);
-    font-size: .75em;
-    font-weight: 600;
-    margin-top: .25em;
+    text-transform: uppercase;
+    color: black; /* cor da letra caixas*/
+    font-family: arial, verdana, tahoma;
+    font-size: 11px;
 }
 
-/* ------------------------------------------------------------
-	Responsive Styles
------------------------------------------------------------- */
-
-@media screen and (max-width: 30em) {
-    .primaryNav ul {
-        display: block;
-    }
-    .primaryNav li {
-        width: 100%;
-        padding-right: 0;
-    }
-    .primaryNav #home {
-        width: 100%;
-        position: relative;
-        margin-bottom: -1em;
-        margin-top: 0;
-    }
-    .utilityNav {
-        float: none;
-        display: block;
-        width: 100%;
-        text-align: right;
-        margin-bottom: 2.5em;
-        max-width: 100%;
-    }
+.nav li a:hover, .nav li a:hover+ul li a {
+    color: #000;
+    background: #c8e4f8;
+    border: 1px solid #94a0b4;
 }
 
-/* The media queries below keep the grid column widths intact when
-a column wraps. This prevents the wrapped column from displaying at
-100% width. These queries also make the homepage line item flex
-appropriately. When your sitemap is complete, remove the queries
-that you don't need, and your sitemap layout will work perfectly. */
+.nav li a:hover+ul li::after,
+.nav li a:hover+ul li::before,
+.nav li a:hover+ul::before,
+.nav li a:hover+ul ul::before{
+    content: '';
+    border-color: red;
 
-/* two column */
-@media screen and (min-width: 30em) {
-    .primaryNav > ul > li {	max-width: 50%;	}
+
+
+
 }
-/* three column */
-@media screen and (min-width: 38.5em) {
-    .primaryNav > ul > li {	max-width: 33%;	}
+/*cores e definições de niveis*/
+#painel{
+    background-color: #8dccad;
+    padding: 20px;
+    width: 40%;
+
 }
-/* four column */
-@media screen and (min-width: 50em) {
-    .primaryNav > ul > li {	max-width: 25%;	}
+
+#professores{
+    background-color: #f5cc7f;
+    padding: 20px;
+    width: 40%;
+}
+
+#equipes{
+    background-color: #7b9fe0;
+    padding: 9px;
+    width: auto;
+}
+
+#protocolos{
+    background-color: #f27c8d;
+    padding: 9px;
+    width: 100%;
 }
