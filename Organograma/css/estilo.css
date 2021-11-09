@@ -26,9 +26,9 @@
 
 html,
 body {
-
     height: auto;
     width: auto;
+
 
     display: flex;
     flex-direction: row;
@@ -153,8 +153,10 @@ body {
 
 #equipes{
     background-color: #7b9fe0;
-    padding: 9px;
-    width: auto;
+    height: 60px;
+    width: 85px; /** 75**/
+    padding: 10px;
+    text-align: center;
 }
 
 #protocolos{
